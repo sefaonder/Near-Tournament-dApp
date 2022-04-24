@@ -1,13 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
-import { initContract } from './utils'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { initContract } from "./utils";
+import "./index.css";
 
 window.nearInitPromise = initContract()
   .then(() => {
     ReactDOM.render(
-      <App />,
-      document.querySelector('#root')
-    )
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>,
+      document.querySelector("#root")
+    );
   })
-  .catch(console.error)
+  .catch(console.error);
