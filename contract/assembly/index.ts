@@ -42,7 +42,7 @@ export function updateTournamentContent(TournamentID: u32, description: string, 
 //Delete a existing Tournament
 export function deleteTournament(TournamentID: u32): string {
   assertTournament(TournamentID);
-
+  const Tournament = tournaments.getSome(TournamentID);
   const user = Context.predecessor;
   assert(user == Tournament.publisher, "you cannot delete this tournament");
 
