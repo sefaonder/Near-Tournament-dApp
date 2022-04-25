@@ -1,4 +1,4 @@
-import { Context, ContractPromiseBatch, logging, storage, u128 } from "near-sdk-as";
+import { Context, ContractPromiseBatch, logging, u128 } from "near-sdk-as";
 import { tournaments, Tournament, Tournament } from "./model";
 
 export const ONE_NEAR_YOKTO = u128.from("1000000000000000000000000");
