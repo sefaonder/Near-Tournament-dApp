@@ -84,7 +84,7 @@ The view methods and doesn't make changes to storage
 ### get Tournament
 
 ```
- near view $CONTRACT getTournaments '{"TournamentID":<Tournament ID>}' --accountId example.testnet
+ near view $CONTRACT getTournament '{"TournamentID":<Tournament ID>}' --accountId example.testnet
 ```
 
 ---
