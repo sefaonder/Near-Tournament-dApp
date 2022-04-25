@@ -27,6 +27,14 @@ export default function App(props) {
   const [accountInfo, setAccountInfo] = useState({});
   const user = window.contract.account.accountId;
 
+  if (!window.walletConnection.isSignedIn()) {
+    return (
+      <>
+        <SignIn />
+      </>
+    );
+  }
+
   async function getBalance() {
     window.contract.account.getAccountBalance().then((res) => {
       setAccountInfo(res);
@@ -34,7 +42,9 @@ export default function App(props) {
   }
 
   useEffect(() => {
-    getBalance();
+    if (window.walletConnection.isSignedIn()) {
+      getBalance();
+    }
   }, []);
 
   return (
@@ -63,7 +73,6 @@ export default function App(props) {
       <Container>
         <Box sx={{ flexGrow: 1 }}>
           <Routes>
-            <Route path="/signin" element={<SignIn />} />
             <Route path="/" element={<Tournaments />} />
             <Route path="/tournament/:tournamentId" element={<Tournament />} />
           </Routes>

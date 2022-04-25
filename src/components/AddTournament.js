@@ -8,6 +8,7 @@ function AddTournament(props) {
     try {
       window.contract.createTournament(values).then((res) => {
         props.handleClose();
+        window.location.pathname = "/";
       });
     } catch (error) {
       console.log(error);
