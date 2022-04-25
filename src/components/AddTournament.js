@@ -25,6 +25,7 @@ function AddTournament(props) {
     try {
       window.contract.updateTournamentContent({ ...values, TournamentID: id }).then((res) => {
         props.handleClose();
+        window.location.pathname = `/tournament/${id}`;
       });
     } catch (error) {
       console.log(error);
