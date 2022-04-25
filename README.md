@@ -13,6 +13,7 @@ Tournament App people can create a tournament and publish contract storage.Anyon
 # Contract Methods
 
 To run contracts via near CLI
+
 Install dependencies
 
 ```
@@ -25,10 +26,10 @@ Build and deploy the contract
 yarn dev
 ```
 
-To export contract id
+Export contract id
 
 ```
-export CONTRACT = dev-1650747703184-81566109908341
+export CONTRACT = <dev-contract-id>
 ```
 
 ## Call Methods
@@ -97,13 +98,7 @@ Install dependencies
 yarn
 ```
 
-Build the contract
-
-```
-yarn prestart
-```
-
-Start the contract
+Build and start the contract
 
 ```
 yarn start
