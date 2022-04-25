@@ -6,9 +6,9 @@ Tournament App people can create a tournament and publish contract storage.Anyon
 
 # Quick Start
 
-1.Before you compile this code, you will need to install [Node.js] ≥ 12
-2.To use script install yarn [yarn]
-3.Install near CLI to call contract methods [near-cli]
+1. Before you compile this code, you will need to install [Node.js] ≥ 12
+2. To use script install yarn [yarn]
+3. Install near CLI to call contract methods [near-cli]
 
 # Contract Methods
 
