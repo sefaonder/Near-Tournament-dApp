@@ -26,6 +26,9 @@ export function updateTournamentContent(TournamentID: u32, description: string, 
   assertTournament(TournamentID);
   const Tournament = tournaments.getSome(TournamentID);
 
+  const user = Context.predecessor;
+  assert(user == Tournament.publisher, "you cannot edit this tournament");
+
   //assign statements
   Tournament.description = description;
   Tournament.tournamentFee = tournamentFee;
@@ -39,6 +42,10 @@ export function updateTournamentContent(TournamentID: u32, description: string, 
 //Delete a existing Tournament
 export function deleteTournament(TournamentID: u32): string {
   assertTournament(TournamentID);
+
+  const user = Context.predecessor;
+  assert(user == Tournament.publisher, "you cannot delete this tournament");
+
   //delete the tournaments in storage
   tournaments.delete(TournamentID);
   return "Succesfully Deleted";
@@ -73,6 +80,7 @@ export function removeApply(TournamentID: u32): string {
   const Tournament = tournaments.getSome(TournamentID);
 
   assert(Tournament.applicants.includes(user), "You already didn't apply this tournament");
+
   const index = Tournament.applicants.indexOf(user);
   Tournament.applicants.splice(index, 1);
 
