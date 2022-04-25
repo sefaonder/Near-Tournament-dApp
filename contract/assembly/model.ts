@@ -16,7 +16,7 @@ export class Tournament {
   publisher: string; //tournament publisher
   description: string; //tournament description
   name: string; // tournament name
-  imgUrl: string; //image url
+  imageUrl: string; //image url
   tournamentFee: u32; //tournament entry fee
   vote: i8; // voting down or up for users
   applicants: Array<string> = [];
@@ -27,7 +27,7 @@ export class Tournament {
     this.name = name;
     this.description = description;
     this.tournamentFee = tournamentFee;
-    this.imgUrl = imageUrl;
+    this.imageUrl = imageUrl;
     this.vote = 0;
   }
 }

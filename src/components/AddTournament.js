@@ -1,5 +1,5 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function AddTournament(props) {
   const [value, setValue] = useState({ name: "", tournamentFee: "", imgUrl: "", description: "" });
@@ -15,9 +15,15 @@ function AddTournament(props) {
     }
   }
 
+  useEffect(() => {
+    if (props?.data) {
+      setValue(props.data);
+    }
+  }, [props.data]);
+
   async function updateTournament(id, values) {
     try {
-      window.contract.updateTournament({ ...values, TournamentID: id }).then((res) => {
+      window.contract.updateTournamentContent({ ...values, TournamentID: id }).then((res) => {
         props.handleClose();
       });
     } catch (error) {
@@ -38,7 +44,7 @@ function AddTournament(props) {
             <TextField
               margin="dense"
               id="name"
-              value={props?.data?.name}
+              value={value.name}
               label="Name"
               variant="outlined"
               sx={{ marginRight: 2 }}
@@ -49,7 +55,7 @@ function AddTournament(props) {
             <TextField
               type={"number"}
               margin="dense"
-              value={props?.data?.tournamentFee}
+              value={value.tournamentFee}
               id="tournamentFee"
               label="Tournament Fee"
               variant="outlined"
@@ -62,7 +68,7 @@ function AddTournament(props) {
           <TextField
             margin="dense"
             id="imageUrl"
-            value={props?.data?.imageUrl}
+            value={value.imageUrl}
             label="Image Url"
             variant="outlined"
             fullWidth
@@ -74,7 +80,7 @@ function AddTournament(props) {
             margin="dense"
             id="description"
             label="Description"
-            value={props?.data?.description}
+            value={value.description}
             fullWidth
             variant="outlined"
             onChange={(x) => {

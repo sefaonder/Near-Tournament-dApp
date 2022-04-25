@@ -32,7 +32,7 @@ export function updateTournamentContent(TournamentID: u32, description: string, 
   //assign statements
   Tournament.description = description;
   Tournament.tournamentFee = tournamentFee;
-  Tournament.imgUrl = imageUrl;
+  Tournament.imageUrl = imageUrl;
   Tournament.name = name;
 
   tournaments.set(TournamentID, Tournament);
