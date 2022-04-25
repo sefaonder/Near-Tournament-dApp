@@ -26,7 +26,7 @@ export async function initContract() {
 export function logout() {
   window.walletConnection.signOut();
   // reload page
-  window.location.replace(window.location.origin + "/signin");
+  window.location.replace(window.location.origin + "/");
 }
 
 export async function login() {
