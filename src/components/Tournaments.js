@@ -38,7 +38,7 @@ function Tournaments() {
                 image={
                   // sample unsplash photo by Giorgio Trovato
                   // https://unsplash.com/photos/_XTY6lD8jgM
-                  element.imgUrl ||
+                  element.imageUrl ||
                   "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
                 }
                 alt="tournament-photo"
