@@ -34,9 +34,8 @@ export async function login() {
   // user's behalf.
   // This works by creating a new access key for the user's account and storing
   // the private key in localStorage.
-  const succesURL = "http://localhost:1234/";
-  const failureURL = "http://localhost:1234/";
-  window.walletConnection.requestSignIn(nearConfig.contractName, "Example App", succesURL, failureURL);
+
+  window.walletConnection.requestSignIn(nearConfig.contractName);
 }
 
 export function parseNearAmount(value) {
