@@ -97,8 +97,13 @@ Install dependencies
 ```
 yarn
 ```
+Build contract and web
 
-Build and start the contract
+```
+yarn prestart
+```
+
+Start the project
 
 ```
 yarn start
