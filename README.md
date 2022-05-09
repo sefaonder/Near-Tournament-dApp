@@ -3,6 +3,8 @@
 A [smart contract] written in [AssemblyScript] for an app initialized with [create-near-app]
 
 Tournament App people can create a tournament and publish contract storage.Anyone can see and participate in these tournaments and vote on them
+##
+Loom video : https://www.loom.com/share/7f3f846099724e10817397cdc8edfa6a
 
 # Quick Start
 
