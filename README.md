@@ -11,6 +11,11 @@ Loom video : https://www.loom.com/share/7f3f846099724e10817397cdc8edfa6a
 1. Before you compile this code, you will need to install [Node.js] ≥ 12
 2. To use script install yarn [yarn]
 3. Install near CLI to call contract methods [near-cli]
+4. Connect to your wallet via near-cli
+    ```
+    near login 
+    ```
+5. Use [scripts] to get starting the app quickly
 
 # Contract Methods
 
@@ -117,3 +122,4 @@ yarn start
 [node.js]: https://nodejs.org/en/download/package-manager/
 [yarn]: https://classic.yarnpkg.com/en/
 [near-cli]: https://docs.near.org/docs/tools/near-cli
+[scripts]: ./contract/scripts/Readme.md
