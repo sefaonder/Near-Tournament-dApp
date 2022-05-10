@@ -122,4 +122,4 @@ yarn start
 [node.js]: https://nodejs.org/en/download/package-manager/
 [yarn]: https://classic.yarnpkg.com/en/
 [near-cli]: https://docs.near.org/docs/tools/near-cli
-[scripts]: ./contract/scripts/Readme.md
+[scripts]: ./contract/scripts
